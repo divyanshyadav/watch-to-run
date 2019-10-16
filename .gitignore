@@ -1,0 +1,8 @@
+## OS X ##
+.DS_Store
+
+## Node ##
+node_modules
+
+## Coverage ##
+coverage
