@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const CONSTANTS = require('./constants');
 
-const APP_NAME = 'watchandrun';
+const APP_NAME = 'wae';
 
 function validateFile(value) {
     if (!fs.existsSync(value)) {
