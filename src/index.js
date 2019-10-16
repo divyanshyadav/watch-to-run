@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const { execute } = require('./system');
-const validateAndParseParams = require('./argsParserAndValidator');
+const validator = require('./validator');
 const CONSTANTS = require('./constants');
 
 const INTERVAL = 200;
@@ -21,7 +21,7 @@ function watchAndRun({ filename, cmd }) {
 
 function main() {
     try {
-        const { filename, runner } = validateAndParseParams({
+        const { runner, filename } = validator({
             runner: process.argv[2],
             filename: process.argv[3],
         });

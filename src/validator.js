@@ -2,6 +2,13 @@ const path = require('path');
 const fs = require('fs');
 const CONSTANTS = require('./constants');
 
+
+function validateFile(value) {
+    if (!fs.existsSync(value)) {
+        throw new Error(`Error: ${CONSTANTS.fileDoestExist}`);
+    }
+}
+
 function getUsageExamples(executingFileName) {
     const examples = [
         `eg. ${executingFileName} 'npx babel-node' ./file.js`,
@@ -17,13 +24,7 @@ function getHelpSection() {
 }
 
 
-function validateFile(value) {
-    if (!fs.existsSync(value)) {
-        throw new Error(`Error: ${CONSTANTS.fileDoestExist}`);
-    }
-}
-
-function validateAndParseParams({ filename, runner }) {
+function validate({ filename, runner }) {
     if (!filename || !runner) {
         throw new Error(getHelpSection());
     }
@@ -37,4 +38,4 @@ function validateAndParseParams({ filename, runner }) {
     };
 }
 
-module.exports = validateAndParseParams;
+module.exports = validate;
