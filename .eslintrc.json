@@ -11,12 +11,8 @@
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
     },
-    "parserOptions": {
-        "ecmaVersion": 2018
-    },
+    "parserOptions": {},
     "rules": {
-        "immutable/no-mutation": 2,
-        "immutable/no-let": 2,
         "indent": ["error", 4]
     }
 }
