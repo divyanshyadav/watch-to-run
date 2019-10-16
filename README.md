@@ -1,4 +1,4 @@
-### Watch and Run
+# Watch and Run
 
 Its a command-line tool that watches the given file for changes and executes it after that.
 
