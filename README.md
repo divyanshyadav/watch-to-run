@@ -2,6 +2,12 @@
 
 Its a command-line tool that watches the given file for changes and executes it after that.
 
+## Installation
+
+```bash
+    $ npm install -g watch-to-run
+```
+
 ## Usage
 
 ```bash
