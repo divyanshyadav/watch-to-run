@@ -1,21 +1,21 @@
-/* eslint-disable no-console */
 const { exec } = require('child_process');
+const logger = require('./logger');
 
 function execute(cmd, clear = true) {
     exec(cmd, (err, stdout, stderr) => {
         if (clear) {
-            console.clear();
+            logger.clear();
         }
 
         if (err) {
-            console.error(err.message);
+            logger.error(err.message);
         } else {
             if (stdout) {
-                console.log(`${stdout}`);
+                logger.log(`${stdout}`);
             }
 
             if (stderr) {
-                console.log(`${stderr}`);
+                logger.log(`${stderr}`);
             }
         }
     });

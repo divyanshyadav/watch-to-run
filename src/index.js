@@ -1,7 +1,6 @@
-/* eslint-disable no-console */
-
 const fs = require('fs');
 const { execute } = require('./system');
+const logger = require('./logger');
 const validator = require('./validator');
 const CONSTANTS = require('./constants');
 
@@ -12,8 +11,8 @@ function watchAndRun({ filename, cmd }) {
     execute(finalCmd);
 
     fs.watchFile(filename, { interval: WATCH_INTERVAL }, () => {
-        console.clear();
-        console.log(CONSTANTS.executing);
+        logger.clear();
+        logger.loading(CONSTANTS.executing);
         execute(finalCmd);
     });
 }
@@ -31,7 +30,7 @@ function main() {
             cmd: runner,
         });
     } catch (err) {
-        console.log(err.message);
+        logger.error(err.message);
     }
 }
 

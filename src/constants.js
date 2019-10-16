@@ -1,4 +1,4 @@
 module.exports = {
-    executing: 'Executing...',
+    executing: 'Executing',
     fileDoestExist: 'File doesn\'t exist',
 };
