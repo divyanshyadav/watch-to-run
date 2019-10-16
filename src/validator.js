@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const CONSTANTS = require('./constants');
 
+const APP_NAME = 'watchandrun';
 
 function validateFile(value) {
     if (!fs.existsSync(value)) {
@@ -19,7 +20,7 @@ function getUsageExamples(executingFileName) {
 }
 
 function getHelpSection() {
-    const executingFileName = path.basename(__filename);
+    const executingFileName = APP_NAME;
     return `Usage: ${executingFileName} <runner> <file> ${getUsageExamples(executingFileName)}`;
 }
 

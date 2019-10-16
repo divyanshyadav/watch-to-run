@@ -5,13 +5,13 @@ const { execute } = require('./system');
 const validator = require('./validator');
 const CONSTANTS = require('./constants');
 
-const INTERVAL = 200;
+const WATCH_INTERVAL = 200;
 
 function watchAndRun({ filename, cmd }) {
     const finalCmd = `${cmd} ${filename}`;
     execute(finalCmd);
 
-    fs.watchFile(filename, { interval: INTERVAL }, () => {
+    fs.watchFile(filename, { interval: WATCH_INTERVAL }, () => {
         console.clear();
         console.log(CONSTANTS.executing);
         execute(finalCmd);
