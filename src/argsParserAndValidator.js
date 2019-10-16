@@ -2,7 +2,6 @@ const path = require('path');
 const fs = require('fs');
 const CONSTANTS = require('./constants');
 
-
 function getUsageExamples(executingFileName) {
     const examples = [
         `eg. ${executingFileName} 'npx babel-node' ./file.js`,

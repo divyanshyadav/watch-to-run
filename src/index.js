@@ -1,7 +1,8 @@
 /* eslint-disable no-console */
+
 const fs = require('fs');
 const { execute } = require('./system');
-const validateAndParseParams = require('./argsParser');
+const validateAndParseParams = require('./argsParserAndValidator');
 const CONSTANTS = require('./constants');
 
 const INTERVAL = 200;
