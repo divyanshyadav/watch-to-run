@@ -1,10 +1,11 @@
 {
-  "name": "watch-to-execute",
+  "name": "watch-to-run",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish:minor": "npm version minor && git push && git push --tags",
   },
   "author": "",
   "license": "ISC",
@@ -15,5 +16,12 @@
   },
   "bin": {
     "watchtorun": "./cli.js"
-  }
+  },
+  "dependencies": {},
+  "keywords": [
+    "watch",
+    "node",
+    "cli",
+    "watcher"
+  ]
 }
