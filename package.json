@@ -1,13 +1,11 @@
 {
   "name": "watch-to-run",
-  "version": "1.2.1",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish:minor": "npm version minor && git push && git push --tags",
-    "publish:major": "npm version major && git push && git push --tags",
-    "publish:patch": "npm version patch && git push && git push --tags"
+    "publish:patch": "npm version patch && git push && git push --tags && npm publish"
   },
   "author": "",
   "license": "ISC",
