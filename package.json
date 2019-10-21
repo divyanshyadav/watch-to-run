@@ -1,7 +1,8 @@
 {
   "name": "watch-to-run",
   "version": "1.0.4",
-  "description": "",
+  "description": "A simple CLI that watches the given file for changes and executes it.",
+  "homepage": "https://github.com/divyanshyadav/watch-to-run",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
